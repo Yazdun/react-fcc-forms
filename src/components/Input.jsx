@@ -23,7 +23,7 @@ export const Input = ({
   const isInvalid = isFormInvalid(inputErrors)
 
   const input_tailwind =
-    'p-5 font-medium rounded-md w-full border border-slate-200 placeholder:opacity-60'
+    'p-5 font-medium rounded-md w-full border border-slate-300 placeholder:opacity-60'
 
   return (
     <div className={cn('flex flex-col w-full gap-2', className)}>
