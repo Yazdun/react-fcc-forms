@@ -23,7 +23,12 @@ export const Form = () => {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={e => e.preventDefault()} noValidate className="container">
+      <form
+        onSubmit={e => e.preventDefault()}
+        noValidate
+        autoComplete="off"
+        className="container"
+      >
         <div className="grid gap-5 md:grid-cols-2">
           <Input {...name_validation} />
           <Input {...email_validation} />
