@@ -1,3 +1,11 @@
+/*-------------------------------------------------------------------
+|  🐼 Input Validators 
+|
+|  🐯 Purpose: THIS FILE CONTAINS ALL THE VALIDATORS OBJECTS
+|
+|  🐸 Returns:  -
+*-------------------------------------------------------------------*/
+
 export const name_validation = {
   name: 'name',
   label: 'name',
