@@ -1,8 +1,7 @@
 import cn from 'classnames'
 import { findInputError, isFormInvalid } from '../utils'
 import { useFormContext } from 'react-hook-form'
-import { AnimatePresence } from 'framer-motion'
-import { InputError } from './Error'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const Input = ({
   name,
@@ -23,10 +22,10 @@ export const Input = ({
   const isInvalid = isFormInvalid(inputErrors)
 
   const input_tailwind =
-    'px-[1.563rem] font-medium autofill:bg-red-100 py-[1.25rem] rounded-md w-full border border-slate-200 dark:border-dark-700 dark:bg-dark-700 focus:outline-none placeholder:opacity-60'
+    'p-5 font-medium rounded-md w-full border border-slate-200 placeholder:opacity-60'
 
   return (
-    <div className="flex flex-col w-full gap-2">
+    <div className={cn('flex flex-col w-full gap-2', className)}>
       <div className="flex justify-between">
         <label htmlFor={id} className="font-bold">
           {label}
@@ -44,11 +43,7 @@ export const Input = ({
         <textarea
           id={id}
           type={type}
-          className={cn(
-            input_tailwind,
-            'min-h-[10rem] max-h-[20rem] resize-y',
-            className,
-          )}
+          className={cn(input_tailwind, 'min-h-[10rem] max-h-[20rem] resize-y')}
           placeholder={placeholder}
           {...register(`${name}`, validation)}
         ></textarea>
@@ -56,11 +51,29 @@ export const Input = ({
         <input
           id={id}
           type={type}
-          className={cn(input_tailwind, className)}
+          className={cn(input_tailwind)}
           placeholder={placeholder}
           {...register(`${name}`, validation)}
         />
       )}
     </div>
   )
+}
+
+export const InputError = ({ message }) => {
+  return (
+    <motion.p
+      className="px-2 bg-red-100 text-red-500 font-semibold rounded-md"
+      {...framer_error}
+    >
+      {message}
+    </motion.p>
+  )
+}
+
+export const framer_error = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 10 },
+  transition: { duration: 0.2 },
 }
