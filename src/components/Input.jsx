@@ -1,3 +1,11 @@
+/*-------------------------------------------------------------------
+|  🐼 React FC Input
+|
+|  🐯 Purpose: RE-USEABLE INPUT COMPOENT
+|
+|  🐸 Returns:  JSX
+*-------------------------------------------------------------------*/
+
 import cn from 'classnames'
 import { findInputError, isFormInvalid } from '../utils'
 import { useFormContext } from 'react-hook-form'
@@ -61,7 +69,7 @@ export const Input = ({
   )
 }
 
-export const InputError = ({ message }) => {
+const InputError = ({ message }) => {
   return (
     <motion.p
       className="px-2 bg-red-100 flex items-center gap-1 text-red-500 font-semibold rounded-md"
@@ -73,7 +81,7 @@ export const InputError = ({ message }) => {
   )
 }
 
-export const framer_error = {
+const framer_error = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 10 },

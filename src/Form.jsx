@@ -1,3 +1,11 @@
+/*-------------------------------------------------------------------
+|  🐼 React FC Form
+|
+|  🐯 Purpose: RENDERS FORM CONTEXT AND INPUTS
+|
+|  🐸 Returns:  JSX
+*-------------------------------------------------------------------*/
+
 import { Input } from './components'
 import { FormProvider, useForm } from 'react-hook-form'
 import {
