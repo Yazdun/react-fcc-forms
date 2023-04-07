@@ -32,7 +32,7 @@ export const Form = () => {
           <Input {...desc_validation} className="md:col-span-2" />
         </div>
         <div className="mt-5">
-          {!success && (
+          {success && (
             <p className="font-semibold text-green-500 mb-5 flex items-center gap-1">
               <BsFillCheckSquareFill /> Form has been submitted successfully
             </p>
