@@ -2,6 +2,7 @@ import cn from 'classnames'
 import { findInputError, isFormInvalid } from '../utils'
 import { useFormContext } from 'react-hook-form'
 import { AnimatePresence, motion } from 'framer-motion'
+import { MdError } from 'react-icons/md'
 
 export const Input = ({
   name,
@@ -27,7 +28,7 @@ export const Input = ({
   return (
     <div className={cn('flex flex-col w-full gap-2', className)}>
       <div className="flex justify-between">
-        <label htmlFor={id} className="font-bold">
+        <label htmlFor={id} className="font-semibold capitalize">
           {label}
         </label>
         <AnimatePresence mode="wait" initial={false}>
@@ -53,7 +54,7 @@ export const Input = ({
           type={type}
           className={cn(input_tailwind)}
           placeholder={placeholder}
-          {...register(`${name}`, validation)}
+          {...register(name, validation)}
         />
       )}
     </div>
@@ -63,9 +64,10 @@ export const Input = ({
 export const InputError = ({ message }) => {
   return (
     <motion.p
-      className="px-2 bg-red-100 text-red-500 font-semibold rounded-md"
+      className="px-2 bg-red-100 flex items-center gap-1 text-red-500 font-semibold rounded-md"
       {...framer_error}
     >
+      <MdError />
       {message}
     </motion.p>
   )
