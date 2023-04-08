@@ -6,8 +6,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  @apply bg-slate-50;
 }
 
 .container {
-  @apply w-full p-5 max-w-3xl mx-auto;
+  @apply w-full max-w-3xl p-5 mx-auto;
 }
