@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://twitter.com/Yazdun">
+  <a href="https://www.freecodecamp.org/">
     <img src="./public/fcc.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -12,14 +12,14 @@
   <p align="center">
     The Ultimate Guide for Beginners
     <br />
-    <a href="https://create.t3.gg/"><strong>Read on FreeCodeCamp »</strong></a>
+    <a href="https://www.freecodecamp.org/news/how-to-validate-forms-in-react"><strong>Read on FreeCodeCamp »</strong></a>
     <br />
     <br />
-    <a href="http://chirp-plus.vercel.app/">View Demo</a>
+    <a href="https://react-fcc-forms.vercel.app/">View Demo</a>
     ·
-    <a href="https://youtu.be/YkOSUVzOAA4">Request Feature</a>
+    <a href="https://github.com/Yazdun/react-fcc-forms/issues">Request Feature</a>
     ·
-    <a href="https://github.com/Yazdun/chirp/issues">Report Bug</a>
+    <a href="https://github.com/Yazdun/react-fcc-forms/issues">Report Bug</a>
   </p>
 
 [![freeCodeCamp](https://img.shields.io/badge/-freeCodeCamp-brightgreen?logo=freeCodeCamp)](https://www.freecodecamp.org/)
@@ -44,6 +44,37 @@ The repository contains the complete source code for the form, including the
 Input component and validation configurations. It also includes the necessary
 dependencies and configuration files to get started with the form in your own
 React projects.
+
+## Getting Started
+
+To get started with the form in your local development environment, follow these
+steps:
+
+1. Clone the repository to your local machine.
+
+```bash
+git@github.com:your-username/react-fcc-forms.git
+```
+
+2. Open the cloned folder in your preferred code editor, install the required
+   dependencies by running the following command in the terminal:
+
+```bash
+npm install
+```
+
+3. To access the boilerplate files in order to follow along with the tutorial,
+   run the following command:
+
+```bash
+git checkout starter
+```
+
+3. Start the development server by running the following command:
+
+```bash
+npm run dev
+```
 
 ## Contribute to this project
 
