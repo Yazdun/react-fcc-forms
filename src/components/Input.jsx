@@ -54,7 +54,7 @@ export const Input = ({
           type={type}
           className={cn(input_tailwind, 'min-h-[10rem] max-h-[20rem] resize-y')}
           placeholder={placeholder}
-          {...register(`${name}`, validation)}
+          {...register(name, validation)}
         ></textarea>
       ) : (
         <input
@@ -72,7 +72,7 @@ export const Input = ({
 const InputError = ({ message }) => {
   return (
     <motion.p
-      className="px-2 bg-red-100 flex items-center gap-1 text-red-500 font-semibold rounded-md"
+      className="flex items-center gap-1 px-2 font-semibold text-red-500 bg-red-100 rounded-md"
       {...framer_error}
     >
       <MdError />
