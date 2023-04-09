@@ -35,15 +35,16 @@
 
 ## Introduction
 
-Welcome to the GitHub repository for the **How To Validate Forms in React: The
-Ultimate Guide for Beginners** tutorial! In this tutorial, you will create a
-functional and reusable form using the popular react-hook-form library in
-combination with Tailwind CSS for styling.
+Welcome to the GitHub repository for the
+[How To Validate Forms in React: The Ultimate Guide for Beginners](https://www.freecodecamp.org/news/how-to-validate-forms-in-react)
+tutorial! In this tutorial, you will create a functional and reusable form using
+the popular react-hook-form library in combination with Tailwind CSS for
+styling.
 
 The repository contains the complete source code for the form, including the
 Input component and validation configurations. It also includes the necessary
-dependencies and configuration files to get started with the form in your own
-React projects.
+dependencies and configuration files to get started with the form validation in
+your own React projects.
 
 ## Getting Started
 
