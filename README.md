@@ -47,8 +47,8 @@ React projects.
 
 ## Getting Started
 
-To get started with the form in your local development environment, follow these
-steps:
+To get started with the project in your local development environment, follow
+these steps:
 
 1. Clone the repository to your local machine.
 
@@ -63,18 +63,19 @@ git@github.com:your-username/react-fcc-forms.git
 npm install
 ```
 
-3. To access the boilerplate files in order to follow along with the tutorial,
-   run the following command:
+3. To access the starter files for the tutorial, use the following command:
 
 ```bash
 git checkout starter
 ```
 
-3. Start the development server by running the following command:
+4. Start the development server by running the following command:
 
 ```bash
 npm run dev
 ```
+
+You are now ready to go!
 
 ## Contribute to this project
 
