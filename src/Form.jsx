@@ -1,7 +1,7 @@
 /*-------------------------------------------------------------------
 |  🐼 React FC Form
 |
-|  🐯 Purpose: RENDERS FORM CONTEXT AND INPUTS
+|  🦝 Todo: CREATE AN AWESOME AND MAINTAINABLE FORM COMPONENT 
 |
 |  🐸 Returns:  JSX
 *-------------------------------------------------------------------*/
@@ -21,38 +21,31 @@ import { BsFillCheckSquareFill } from 'react-icons/bs'
 
 export const Form = () => {
   const methods = useForm()
-  const [success, setSuccess] = useState(false)
-
   const onSubmit = methods.handleSubmit(data => {
     console.log(data)
-    methods.reset()
-    setSuccess(true)
   })
 
   return (
     <FormProvider {...methods}>
-      <form
-        onSubmit={e => e.preventDefault()}
-        noValidate
-        autoComplete="off"
-        className="container"
-      >
+      <form onSubmit={e => e.preventDefault()} noValidate className="container">
         <div className="grid gap-5 md:grid-cols-2">
-          <Input {...name_validation} />
-          <Input {...email_validation} />
-          <Input {...num_validation} />
-          <Input {...password_validation} />
-          <Input {...desc_validation} className="md:col-span-2" />
+          <Input
+            label="name"
+            type="text"
+            id="name"
+            placeholder="type your name..."
+          />
+          <Input
+            label="password"
+            type="password"
+            id="password"
+            placeholder="type your password..."
+          />
         </div>
         <div className="mt-5">
-          {success && (
-            <p className="font-semibold text-green-500 mb-5 flex items-center gap-1">
-              <BsFillCheckSquareFill /> Form has been submitted successfully
-            </p>
-          )}
           <button
             onClick={onSubmit}
-            className="p-5 rounded-md bg-blue-600 font-semibold text-white flex items-center gap-1 hover:bg-blue-800"
+            className="flex items-center gap-1 p-5 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-800"
           >
             <GrMail />
             Submit Form
